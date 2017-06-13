@@ -114,11 +114,17 @@ export default class FlatListCard extends Component {
                         />
                 </CardItem>
                 <CardItem>
-                    <Icon name='ios-musical-notes' style={{ color: '#ED4A6A' }} />
-                    <Icon name='ios-musical-notes' style={{ color: '#ED4A6A' }} />
-                    <Text>1.5M</Text>
-                    <Icon name='ios-musical-notes' style={{ color: '#ED4A6A' }} />
-                    <Text>1k</Text>
+                    <Button transparent>
+                        <Icon name='ios-musical-notes' style={{ color: '#ED4A6A' }} />
+                    </Button>
+                    <Button transparent>
+                        <Icon name='ios-musical-notes' style={{ color: '#ED4A6A' }} />
+                        <Text>1.5M</Text>
+                    </Button>
+                    <Button transparent>
+                        <Icon name='ios-musical-notes' style={{ color: '#ED4A6A' }} />
+                        <Text>1k</Text>
+                    </Button>
                 </CardItem>
             </Card>
         );
