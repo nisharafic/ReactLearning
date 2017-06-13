@@ -104,21 +104,25 @@ export default class FlatListCard extends Component {
                 <CardItem cardBody>
                     <Image style={{ resizeMode: 'cover', height: 350 }} source={require('../images/wallpaper.jpg')} />
                 </CardItem>
-
+                <CardItem>
+                    <View
+                        style={{
+                            height: 1,
+                            width: "100%",
+                            backgroundColor: "#CED0CE",
+                        }}
+                        />
+                </CardItem>
                 <CardItem>
                     <Icon name='ios-musical-notes' style={{ color: '#ED4A6A' }} />
-                    <Right>
-                        <Icon name='ios-musical-notes' style={{ color: '#ED4A6A' }} />
-                        <Text>1.5M</Text>
-                        <Icon name='ios-musical-notes' style={{ color: '#ED4A6A' }} />
-                        <Text>1k</Text>
-                    </Right>
+                    <Icon name='ios-musical-notes' style={{ color: '#ED4A6A' }} />
+                    <Text>1.5M</Text>
+                    <Icon name='ios-musical-notes' style={{ color: '#ED4A6A' }} />
+                    <Text>1k</Text>
                 </CardItem>
-
             </Card>
         );
     }
-
 
     render() {
         return (
