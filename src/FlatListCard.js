@@ -10,6 +10,7 @@ import {
 } from 'react-native';
 import { List, ListItem, SearchBar } from "react-native-elements";
 import { Container, Content, Card, CardItem, Thumbnail, Button, Icon, Left, Right, Body } from 'native-base';
+import { Col, Row, Grid } from 'react-native-easy-grid';
 
 import ProgressBar from './global/ProgressBar';
 const { width: viewportWidth, height: viewportHeight } = Dimensions.get('window');
@@ -104,27 +105,36 @@ export default class FlatListCard extends Component {
                 <CardItem cardBody>
                     <Image style={{ resizeMode: 'cover', height: 350 }} source={require('../images/wallpaper.jpg')} />
                 </CardItem>
-                <CardItem>
-                    <View
+                 <View
                         style={{
                             height: 1,
-                            width: "100%",
+                            width: "96%",
+                            marginTop:5,
                             backgroundColor: "#CED0CE",
+                            marginLeft:"2%",
+                            marginRight:"2%"
                         }}
                         />
-                </CardItem>
                 <CardItem>
-                    <Button transparent>
-                        <Icon name='ios-musical-notes' style={{ color: '#ED4A6A' }} />
-                    </Button>
-                    <Button transparent>
-                        <Icon name='ios-musical-notes' style={{ color: '#ED4A6A' }} />
-                        <Text>1.5M</Text>
-                    </Button>
-                    <Button transparent>
-                        <Icon name='ios-musical-notes' style={{ color: '#ED4A6A' }} />
-                        <Text>1k</Text>
-                    </Button>
+                    <Grid style={{ backgroundColor: '#D954D7'}}>
+                        <Col style={{ backgroundColor: '#D954D7', height: 26 }}>
+                            <Left>
+                                <Icon  name="thumbs-up" />
+                            </Left>
+                        </Col>
+                        <Col style={{ backgroundColor: '#D93735', height: 26 }}>
+                            <Left>
+                                <Icon  name="thumbs-up" />
+                                <Text>999</Text>
+                            </Left>
+                        </Col>
+                        <Col style={{ backgroundColor: '#D92555', height: 26 }}>
+                            <Left>
+                                <Icon  name="thumbs-up" />
+                                <Text>898</Text>
+                            </Left>
+                        </Col>
+                    </Grid>
                 </CardItem>
             </Card>
         );
@@ -149,3 +159,9 @@ export default class FlatListCard extends Component {
         );
     }
 }
+
+const styles = StyleSheet.create({
+    footerBtn: {
+        height: 70,
+    }
+});
