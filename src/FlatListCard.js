@@ -9,7 +9,7 @@ import {
     ActivityIndicator,
 } from 'react-native';
 import { List, ListItem, SearchBar } from "react-native-elements";
-import { Container, Content, Card, CardItem, Thumbnail, Button, Icon, Left, Body } from 'native-base';
+import { Container, Content, Card, CardItem, Thumbnail, Button, Icon, Left, Right, Body } from 'native-base';
 
 import ProgressBar from './global/ProgressBar';
 const { width: viewportWidth, height: viewportHeight } = Dimensions.get('window');
@@ -90,19 +90,31 @@ export default class FlatListCard extends Component {
     };
     renderCard = (item) => {
         return (
-            // <ListItem
-            //     roundAvatar
-            //     title={`${item.name.first} ${item.name.last}`}
-            //     subtitle={item.email}
-            //     avatar={{ uri: item.picture.thumbnail }}
-            //     containerStyle={{ borderBottomWidth: 0 }}
-            //     />
             <Card>
                 <CardItem>
                     <Left>
                         <Thumbnail source={{ uri: item.picture.thumbnail }} />
+                        <Body>
+                            <Text>{`${item.name.first} ${item.name.last}`}</Text>
+                            <Text note>2 mins ago</Text>
+                        </Body>
                     </Left>
                 </CardItem>
+
+                <CardItem cardBody>
+                    <Image style={{ resizeMode: 'cover', height: 350 }} source={require('../images/wallpaper.jpg')} />
+                </CardItem>
+
+                <CardItem>
+                    <Icon name='ios-musical-notes' style={{ color: '#ED4A6A' }} />
+                    <Right>
+                        <Icon name='ios-musical-notes' style={{ color: '#ED4A6A' }} />
+                        <Text>1.5M</Text>
+                        <Icon name='ios-musical-notes' style={{ color: '#ED4A6A' }} />
+                        <Text>1k</Text>
+                    </Right>
+                </CardItem>
+
             </Card>
         );
     }
