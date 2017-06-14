@@ -105,37 +105,21 @@ export default class FlatListCard extends Component {
                 <CardItem cardBody>
                     <Image style={{ resizeMode: 'cover', height: 350 }} source={require('../images/wallpaper.jpg')} />
                 </CardItem>
-                 <View
-                        style={{
-                            height: 1,
-                            width: "96%",
-                            marginTop:5,
-                            backgroundColor: "#CED0CE",
-                            marginLeft:"2%",
-                            marginRight:"2%"
-                        }}
-                        />
-                <CardItem>
-                    <Grid style={{ backgroundColor: '#D954D7'}}>
-                        <Col style={{ backgroundColor: '#D954D7', height: 26 }}>
-                            <Left>
-                                <Icon  name="thumbs-up" />
-                            </Left>
-                        </Col>
-                        <Col style={{ backgroundColor: '#D93735', height: 26 }}>
-                            <Left>
-                                <Icon  name="thumbs-up" />
-                                <Text>999</Text>
-                            </Left>
-                        </Col>
-                        <Col style={{ backgroundColor: '#D92555', height: 26 }}>
-                            <Left>
-                                <Icon  name="thumbs-up" />
-                                <Text>898</Text>
-                            </Left>
-                        </Col>
-                    </Grid>
-                </CardItem>
+                <View
+                    style={{
+                        height: 1,
+                        width: "96%",
+                        marginTop: 5,
+                        backgroundColor: "#CED0CE",
+                        marginLeft: "2%",
+                        marginRight: "2%"
+                    }}
+                    />
+                <View style={styles.footerBtn}>
+                    <View style={{ flex: 1, height: 40, backgroundColor: 'powderblue' }} />
+                    <View style={{ flex: 1, height: 40, backgroundColor: 'skyblue' }} />
+                    <View style={{ flex: 1, height: 40, backgroundColor: 'steelblue' }} />
+                </View>
             </Card>
         );
     }
@@ -162,6 +146,9 @@ export default class FlatListCard extends Component {
 
 const styles = StyleSheet.create({
     footerBtn: {
-        height: 70,
-    }
+        flex: 1, 
+        flexDirection: 'row',
+        marginLeft:2,
+        marginRight:2
+    },
 });
