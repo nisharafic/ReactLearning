@@ -102,6 +102,9 @@ export default class FlatListCard extends Component {
                             <Text note>2 mins ago</Text>
                         </Body>
                     </Left>
+                    <Right>
+                          <Icon name="arrow-forward" />
+                    </Right>
                 </CardItem>
 
                 <CardItem cardBody>
