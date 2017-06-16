@@ -9,7 +9,7 @@ import {
     ActivityIndicator,
 } from 'react-native';
 import { List, ListItem, SearchBar } from "react-native-elements";
-import { Container, Content, Card, CardItem, Thumbnail, Button, Icon, Left, Right, Body } from 'native-base';
+import { Container, Content, Card, CardItem, Thumbnail, Button, Icon,Footer,FooterTab, Left, Right, Body } from 'native-base';
 import { Col, Row, Grid } from 'react-native-easy-grid';
 
 import ProgressBar from './global/ProgressBar';
@@ -89,6 +89,8 @@ export default class FlatListCard extends Component {
             </View>
         );
     };
+
+
     renderCard = (item) => {
         return (
             <Card>
@@ -115,7 +117,7 @@ export default class FlatListCard extends Component {
                         marginRight: "2%"
                     }}
                     />
-                <View style={styles.footerBtn}>
+                <View style={styles.statusBtn}>
                     <View style={{ flex: 1, height: 40, backgroundColor: 'powderblue' }} />
                     <View style={{ flex: 1, height: 40, backgroundColor: 'skyblue' }} />
                     <View style={{ flex: 1, height: 40, backgroundColor: 'steelblue' }} />
@@ -126,29 +128,60 @@ export default class FlatListCard extends Component {
 
     render() {
         return (
-            <List containerStyle={{ borderTopWidth: 0, borderBottomWidth: 0 }}>
-                <FlatList
-                    data={this.state.data}
-                    renderItem={({ item }) => this.renderCard(item)}
-                    keyExtractor={item => item.email}
-                    ItemSeparatorComponent={false}
-                    ListHeaderComponent={this.renderHeader}
-                    ListFooterComponent={this.renderFooter}
-                    onRefresh={this.handleRefresh}
-                    refreshing={this.state.refreshing}
-                    onEndReached={this.handleLoadMore}
-                    onEndReachedThreshold={5}
-                    />
-            </List>
+            <View style={{ flex: 1 }}>
+                <View style={{ flex: .8 }}>
+                    <List containerStyle={{ borderTopWidth: 0, borderBottomWidth: 0 }}>
+                        <FlatList
+                            data={this.state.data}
+                            renderItem={({ item }) => this.renderCard(item)}
+                            keyExtractor={item => item.email}
+                            ItemSeparatorComponent={false}
+                            ListHeaderComponent={false}
+                            ListFooterComponent={this.renderFooter}
+                            onRefresh={this.handleRefresh}
+                            refreshing={this.state.refreshing}
+                            onEndReached={this.handleLoadMore}
+                            onEndReachedThreshold={5}
+                            />
+                    </List>
+                </View>
+                <View style={{
+                    flex: .2, position: 'absolute',
+                    left: 0,
+                    right: 0,
+                    bottom: 0
+                }}>
+                    <Footer >
+                        <FooterTab>
+                            <Button>
+                                <Icon name="apps" />
+                            </Button>
+                            <Button>
+                                <Icon name="camera" />
+                            </Button>
+                            <Button active>
+                                <Icon active name="navigate" />
+                            </Button>
+                            <Button>
+                                <Icon name="person" />
+                            </Button>
+                        </FooterTab>
+                    </Footer>
+                </View>
+            </View>
         );
     }
 }
 
 const styles = StyleSheet.create({
-    footerBtn: {
-        flex: 1, 
-        flexDirection: 'row',
-        marginLeft:2,
-        marginRight:2
+    cardContainer: {
+        flex: 1,
     },
+    statusBtn: {
+        flex: 1,
+        flexDirection: 'row',
+        marginLeft: 2,
+        marginRight: 2
+    },
+
 });
