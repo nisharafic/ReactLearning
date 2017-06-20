@@ -152,7 +152,7 @@ export default class FlatListCard extends Component {
                     flex: .2, position: 'absolute',
                     left: 0,
                     right: 0,
-                    bottom: 0
+                    bottom: 0,
                 }}>
                     <Footer >
                         <FooterTab>
@@ -160,10 +160,10 @@ export default class FlatListCard extends Component {
                                 <Icon name="apps" />
                             </Button>
                             <Button>
-                                <Icon name="camera" />
+                                <Icon style={{color: '#DE5347'}} name="camera" />
                             </Button>
-                            <Button active>
-                                <Icon active name="navigate" />
+                            <Button>
+                                <Icon name="navigate" />
                             </Button>
                             <Button>
                                 <Icon name="person" />
