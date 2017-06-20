@@ -16,5 +16,6 @@ import FlatListTest from './src/FlatListTest';
 import FlatListCard from './src/FlatListCard';
 import PopupdialogSample from './src/PopupdialogSample';
 import FooterTabSample from './src/FooterTabSample';
+import FeedStatusSample from './src/FeedStatusSample';
 
-AppRegistry.registerComponent('SampleCard', () => FooterTabSample);
+AppRegistry.registerComponent('SampleCard', () => FeedStatusSample);
