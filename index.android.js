@@ -17,6 +17,7 @@ import FlatListCard from './src/FlatListCard';
 import PopupdialogSample from './src/PopupdialogSample';
 import FooterTabSample from './src/FooterTabSample';
 import FeedStatusSample from './src/FeedStatusSample';
-import CameraRollPicker from './src/CameraRollPicker';
+import CameraRollPic from './src/CameraRollPicker';
+import ImageGallarys from './src/ImageGallarys';
 
-AppRegistry.registerComponent('SampleCard', () => CameraRollPicker);
+AppRegistry.registerComponent('SampleCard', () => ImageGallarys);

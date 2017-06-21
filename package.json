@@ -13,6 +13,7 @@
     "react-native-autogrow-textinput": "^4.0.0",
     "react-native-camera-roll-picker": "^1.1.9",
     "react-native-elements": "^0.12.2",
+    "react-native-gallery": "0.0.17",
     "react-native-popup-dialog": "^0.7.29",
     "react-native-sglistview": "^0.4.3"
   },
