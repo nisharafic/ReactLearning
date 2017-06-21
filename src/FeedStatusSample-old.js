@@ -4,7 +4,7 @@ import {
     Text, TextInput,
     View, TouchableOpacity
 } from 'react-native';
-import { Container, Header, Footer, FooterTab, Button, Icon, Title, Left, Right, Body, Content, Item, InputGroup, Input } from 'native-base';
+import { Container, Header, Footer, FooterTab, Button, Icon,Title,Left,Right,Body, Content, Item, InputGroup, Input } from 'native-base';
 import { AutoGrowingTextInput } from 'react-native-autogrow-textinput';
 
 export default class FeedStatusSample extends Component {
@@ -16,10 +16,10 @@ export default class FeedStatusSample extends Component {
     render() {
         return (
             <Container>
-                <Header style={{ backgroundColor: "#bd0f2d" }} >
+                <Header >
                     <Left>
                         <Button transparent>
-                            <Icon name="md-close"  style={{ color: '#FFF' }} />
+                            <Text>Cancel</Text>
                         </Button>
                     </Left>
                     <Body>
@@ -34,20 +34,24 @@ export default class FeedStatusSample extends Component {
                     </View>
                     <View style={{ height: 1, width: "100%", backgroundColor: "#CED0CE", }} />
                     <Footer style={{ backgroundColor: "#fff" }}>
-                        <View style={styles.PostContainer}>
-                            <View style={styles.postFooter}>
-                                <View style={styles.UtilityNav}>
+                        <View style={{ flex: 0.2 }}>
+                            <View style={styles.statusBtn}>
+                                <View style={{ flex: 0.1, alignItems: 'center', justifyContent: 'center', }}>
                                     <TouchableOpacity>
-                                        <Icon name="md-image"  style={{ color: '#bd0f2d' }} />
-                                    </TouchableOpacity>
-                                    <TouchableOpacity>
-                                        <Icon name="md-camera"  style={{ color: '#bd0f2d' }} />
+                                        <Icon name="md-image" style={{ color: '#bd0f2d' }} />
                                     </TouchableOpacity>
                                 </View>
-                                <View style={styles.PostButtonContainer}>
-                                    <View style={styles.postButton}>
-                                        <Text style={styles.PostButtonText}>Post</Text>
-                                    </View>
+                                <View style={{ flex: 0.1, alignItems: 'center', justifyContent: 'center', }} >
+                                    <TouchableOpacity>
+                                        <Icon name="md-camera" style={{ color: '#bd0f2d' }} />
+                                    </TouchableOpacity>
+                                </View>
+                                <View style={{ flex: 0.7, alignItems: 'center', justifyContent: 'center' }}>
+                                </View>
+                                <View style={{ flex: 0.1, alignItems: 'center', justifyContent: 'center' }}>
+                                    <TouchableOpacity>
+                                        <Icon name="md-send" style={{ color: '#bd0f2d', }} />
+                                    </TouchableOpacity>
                                 </View>
                             </View>
                         </View>
@@ -61,47 +65,18 @@ export default class FeedStatusSample extends Component {
     }
 }
 const styles = StyleSheet.create({
-    header: {
-        color: '#fff'
-    },
     textInput: {
         flex: 0.9,
         fontSize: 22,
         margin: 2,
         height: 300,
     },
-    PostContainer: {
+    statusBtn: {
         flex: 1,
-        alignSelf: 'stretch'
-    },
-    postFooter: {
-        backgroundColor: 'white',
         flexDirection: 'row',
-        alignItems: 'flex-end',
-        justifyContent: 'space-between',
-        flex: 1,
-        padding: 8
+        marginLeft: 2,
+        marginRight: 2,
+        alignItems: 'center',
+        height: 50,
     },
-    UtilityNav: {
-        backgroundColor: 'white',
-        flexDirection: 'row',
-        justifyContent: 'space-between',
-        flex: 1,
-    },
-    PostButtonContainer: {
-        flex: 5,
-        alignItems: 'flex-end'
-    },
-    postButton: {
-        flexDirection: 'row',
-        backgroundColor: '#bd0f2d',
-        padding: 8,
-        borderRadius: 6,
-        justifyContent: 'space-between',
-        width: 60,
-    },
-    PostButtonText: {
-        color: 'white'
-    }
-
 });
