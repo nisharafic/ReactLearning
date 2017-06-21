@@ -1,0 +1,1 @@
+//https://github.com/lwansbrough/react-native-camera/blob/master/Example/Example.js
