@@ -19,5 +19,6 @@ import FooterTabSample from './src/FooterTabSample';
 import FeedStatusSample from './src/FeedStatusSample';
 import CameraRollPic from './src/CameraRollPicker';
 import ImageGallarys from './src/ImageGallarys';
+import CaptureCameraPic from './src/CaptureCameraPic';
 
-AppRegistry.registerComponent('SampleCard', () => ImageGallarys);
+AppRegistry.registerComponent('SampleCard', () => CaptureCameraPic);
